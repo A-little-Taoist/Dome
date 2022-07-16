@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>1管理</li>
+            <div>
+                <ul>
+                    <li>1管理</li>
+                    <li>2管理</li>
+                    <li>3管理</li>
+                    <li>4管理</li>
+                </ul>
+            </div>
+            <li>2管理</li>
+            <div>2</div>
+            <li>3管理</li>
+            <div>3</div>
+            <li>4管理</li>
+            <div>4</div>
+        </ul>
+    </div>
+
+</body>
+<script src="./jQuery/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        $("li").css({ width: "100px", height: "30px", background: "red", border: "1px solid", listStyle: "none" });
+        $("div:eq(1)").css({ transform: "translateX(-40px)" })
+        $("ul:eq(1)").children("li").css({ background: "blue", border: "none" });
+        $("div:eq(0)").find("div").hide();
+        $("li:eq(0)").on("mouseenter", function () {
+            $("div:eq(1)").toggle();
+        })
+        $("li:eq(0)").on("mouseleave", function () {
+            $("div:eq(1)").toggle();
+        })
+        $("li:eq(5)").on("mouseenter", function () {
+            $("div:eq(2)").slideDown();
+        })
+        $("li:eq(5)").on("mouseleave", function () {
+            $("div:eq(2)").hide();
+        })
+        $("li:eq(6)").on("mouseenter", function () {
+            $("div:eq(3)").slideDown();
+        })
+        $("li:eq(6)").on("mouseleave", function () {
+            $("div:eq(3)").hide();
+        })
+        $("li:eq(7)").on("mouseenter", function () {
+            $("div:eq(4)").slideDown();
+        })
+        $("li:eq(7)").on("mouseleave", function () {
+            $("div:eq(4)").hide();
+        })
+        $("li:eq(8)").on("mouseenter", function () {
+            $("div:eq(5)").slideDown();
+        })
+        $("li:eq(8)").on("mouseleave", function () {
+            $("div:eq(5)").hide();
+        })
+    });
+
+
+</script>
+
+
+</html>

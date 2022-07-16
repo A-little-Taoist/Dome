@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .round { 
+            width: 0px;
+            /* height: 0px; */
+            border: 50px solid red;
+            border-radius: 70%;
+        }
+        .round:hover{
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-radius: 0%;
+            border-top-color: aqua;
+            border-bottom:none;
+        }
+        /* 等腰三角形 */
+        
+        /* .round:active {
+            border: 50px solid blue;
+                 border-left: 40px solid transparent;
+                 border-right: 40px solid transparent;
+                 border-bottom:none;
+
+        } */
+        .round:active {
+            border: 50px solid rgb(146, 57, 182);
+                 border-left: 40px solid transparent;
+                 border-right: 40px solid transparent;
+                 border-bottom:none;
+                 border-radius: 60%;
+        }
+    </style>
+</head>
+<body>
+    <div class="round"></div>
+</body>
+</html>

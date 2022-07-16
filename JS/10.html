@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 正则表达
+        //写法1
+        // var reg = new RegExp("a"); //匹配含有a 不区分大小写
+        // var str = "jfhjkk";
+        // console.log(reg.test(str));
+        //写法2
+        var reg = /A/i;  //匹配含有a 不区分大小写
+        var str = "jafhjkk";
+        console.log(reg.test(str));
+
+        //模式 i g全局匹配
+        //  var reg = /a|b/;  //包含a或者 b
+        //  var reg = /[ab]/;  //包含a或者 b 写法2
+        // var reg = /[^ab]/; // 规则：字符串中，除了a、b之外，还有没有其他的字符内容？
+        //	var reg = /[^0-9]/;  // 规则：字符串中，除了数字之外，还有没有其他的内容？
+    </script>
+</body>
+
+</html>

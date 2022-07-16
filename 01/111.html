@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       
+    <meta charset="UTF-8">
+       
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 520px;
+            height: 400px;
+            border: 1px solid red;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 520px;
+            height: 350px;
+        }
+
+        p {
+            width: 520px;
+            height: 50px;
+            text-align: center;
+        }
+
+        span {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            margin-top: 5px;
+            background-color: #ddd;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        span:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+        <div>
+                <img src="./img/1.jpg" alt="" id="img">
+                <p>
+                        <span id="btn1">1</span>
+                        <span id="btn2">2</span>
+                        <span id="btn3">3</span>
+                        <span id="btn4">4</span>
+                        <span id="btn5">5</span>
+                    </p>
+            </div>
+       
+    <script>
+        var dd = document.querySelector("img");
+        var btn = document.querySelectorAll("span");
+
+        // btn.onclick = function fun(ID, imgSrc) {
+        //     var btn = document.getElementById("ID");
+        //     img.src = imgSrc;
+        // }
+        //    dd.src= "./img/4.jpg";
+
+        // 伪循环
+        var n = 4;
+        for (var i = 0; i < btn.length; i++) {
+
+            btn[i].onclick = function () {
+                console.log(i - n);
+                dd.src = "./img/" + (i - n) + ".jpg";
+                n--;
+                if (n == 0)
+                    n = 4;
+            };
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        /* 弹性布局 */
+        display: flex;
+
+        height: 400px;
+        background-color: blueviolet;
+
+        /* 设置主轴： 主轴侧轴 默认主轴 x轴,row 竖着排列 侧轴 y轴 column
+        flex-direction: column;
+        /* 翻转 reverse */
+        /* flex-direction: row-reverse; */
+
+        /* justify-content: 设置主轴上排列方式 先确定好主轴  */
+        /* 平分剩余空间 */
+        /* justify-content: space-around; */
+        /* 默认从头部开始 如果主轴是x轴，则从左到右 */
+        /* justify-content: flex-start; */
+        /* 从尾部开始排列 */
+        /* justify-content: flex-end; */
+        /* 主轴居中排列 */
+        /* justify-content: center;  */
+        /* 先两边贴边 再平分剩余空间 */
+        justify-content: space-between;
+        /* 子元素换行 默认不换行 nowrap  换行:wrap */
+        flex-wrap: wrap;
+
+        /* 设置侧轴子元素排列方式 align-items */
+        align-items: center;
+        /* 拉伸 子盒子不要给高度 */
+        align-items: stretch;
+        /* 适用于多行 要换行的子元素排列 单行无用 */
+        align-content: center;
+
+        /* 合写 简写 flex-flow:    ; */
+        /* 权重 分成 */
+        flex: 1;
+        /* 设置某一个子元素的侧轴排列方式 align-self */
+        align-self: flex-end;
+        /* 设置子元素的排列顺序 order: ; */
+      }
+      div span {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+      <span>3</span>
+    </div>
+  </body>
+</html>

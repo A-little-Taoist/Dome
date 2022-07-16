@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>事件</title>
+</head>
+
+<body>
+  <button>显示当前时间</button>
+  <div>某个时间</div>
+  <p class="p" id="p">456</p>
+  <span>你好啊，大家！</span>
+  <p id="ppp">
+    我是文字
+    <span>456</span>
+  </p>
+  <script>
+    //当我们点击了按钮，div中文字会发生改变
+    //1.获取元素
+    document.querySelector("button").addEventListener("click", fn1);
+    var div = document.querySelector("div");
+    //2. 注册事件
+    // btn.onclick = function () {
+    //   div.innerText = "2022-05-04";
+    //   //最好用函数来封装这个时间使他自然
+    // };
+    function fn1() {
+      document.getElementsByTagName("div").innerHTML = "2022-05-04";
+    }
+
+    // 我们元素可以不用添加事件
+    //   document.querySelector("p").innerHTML = "2022-05-00";
+    console.log(document.getElementsByClassName("p"));
+    // p.innerText = '2022-05-04';
+    // innerText 与 innerHTML 区别：innerHTML识别html标签
+
+    // var span = document.querySelector('span');
+    // innerText 不识别html标签
+    // span.innerText = "<strong>今天是：</strong> 2022";
+    // innerHTML
+    //span.innerHTML = '<strong>今天是：</strong> 2022';
+    // 可读写内容
+    // var ppp = document.querySelector('#ppp');
+    // 读写 从起始位置到终止位置的内容，但它去除html标签，同时去除空格和换行
+    console.log(ppp.innerText);
+    // 读写 从起始位置到终止位置的内容，包括html标签，同时保留空格和换行
+    console.log(ppp.innerHTML);
+  </script>
+</body>
+
+</html>

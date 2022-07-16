@@ -1,0 +1,21 @@
+
+/* 清空内外边距 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+/* em i 斜体文字不倾斜 */
+em,
+i {
+    font-style:normal;
+}
+/* 去掉li 的小圆点 */
+li {
+    list-style:none;
+}
+img {
+    /* 照顾低版本浏览器 如果图片外面包含了链接会有边框问题 */
+    border: 0;
+    
+}

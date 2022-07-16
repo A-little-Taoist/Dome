@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 20px;
+            width: 600px;
+            border-bottom: 8px solid #db511d;
+            margin:0 auto;
+            margin-top: 50px;
+        }
+        .box ul li{
+            float: left;
+            list-style: none;
+            margin-left: 1px;
+        }
+        .box ul li:first-child{
+            margin-left: 12px;
+        }
+        .box ul li a{
+            text-decoration: none;
+            height: 20px;
+            width: 80px;
+            display: block;
+            background-color: #dfdfdf;
+            color:#5e5e5e;
+            font-size: 12px;
+            text-align: center;
+            line-height: 20px;
+        }
+        .box ul li a:hover{
+            background-color: #db511d;
+            color: #fff;
+            
+        }
+        .box ul li a:hover span{
+            display: none;
+        }
+        .box ul li p{
+            display: none;
+        }
+        .box ul li a:hover p{
+            display: block;
+        }
+    </style>
+</head>
+
+    <body>
+        <div class="box">
+            <ul>
+                <li><a href="#"><span>首页</span><p>home</p></a></li>
+                <li><a href="#"><span>Blog</span><p>博客</p></a></li>
+                <li><a href="#"><span>guestbook</span><p>首页</p></a></li>
+                <li><a href="#"><span>Pinkbar</span><p>首页</p></a></li>
+                <li><a href="#"><span>fansir</span><p>首页</p></a></li>
+            </ul>
+        </div>
+    </body>
+</html>

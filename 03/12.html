@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <img src="https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/ewm.png" />
+    <script>
+      var dd = document.querySelector("img");
+      dd.onmouseover = function () {
+        console.log("111");
+        document.querySelector("img").style.width = "400px";
+        document.querySelector("img").style.height = "400px";
+      };
+      dd.onmouseout = function () {
+        document.querySelector("img").style.width = "100px";
+        document.querySelector("img").style.height = "100px";
+      };
+    </script>
+  </body>
+</html>

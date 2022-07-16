@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+    <script>
+        // 创建对象方式1
+        var obj = {
+            age: 18,
+            sex: '男',
+            sayHi: function() {
+                console.log('hi!');
+            }
+        }
+        console.log(obj.age);
+        console.log(obj['age']);
+        obj.sayHi();
+        // 遍历对象： for( 变量 in 对象){}
+        for (var k in obj) {
+            console.log(k);
+            console.log(obj[k]);
+        }
+        // 方式2 区别 等号赋值属性值 以分号分隔
+        var obj = new Object();
+        obj.uname = '傻子';
+        obj.age = 17;
+        obj.sayHi = function() {
+                console.log('hi');
+            }
+            // 方式3：构造函数
+            /* function 构造函数名() {
+                this.属性 = 值;
+                this.方法 + function() {
+
+                }
+            } */
+            // new 构造函数名();  使用
+            // 构造函数首字母大写
+        function Obj(uname, age) {
+            this.name = uname;
+        }
+        var ts = new Obj('天下');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

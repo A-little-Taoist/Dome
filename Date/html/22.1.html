@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* ::-webkit-scrollbar 滚动条整体部分
+
+      ::-webkit-scrollbar-thumb 滚动条里面的小方块（即滚动条滑块），能向上向下移动（或横向滚动条可往左往右移动）
+
+      ::-webkit-scrollbar-track 滚动条的轨道（对应上图滚动条凹槽，里面装有Thumb，即滚动条滑块）
+
+      ::-webkit-scrollbar-button 滚动条的轨道的两端按钮，允许通过点击微调小方块的位置
+
+      ::-webkit-scrollbar-corner 边角，即两个滚动条的交汇处
+
+      ::-webkit-scrollbar-track-piece 内层轨道，滚动条中间部分
+
+      ::-webkit-resizer 两个滚动条的交汇处上用于通过拖动调整元素大小的小控件 */
+
+      div {
+        width: 100%;
+        height: 100px;
+        background-color: salmon;
+        line-height: 100px;
+
+        /* 不换行 强制一行显示 */
+        white-space: nowrap;
+        /* y轴滚动条 */
+        overflow-y: hidden;
+      }
+      /*定义滚动条样式（高宽及背景）*/
+      div::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        background-color: blueviolet;
+      }
+      /*定义滚动条轨道（凹槽）样式*/
+      div::-webkit-scrollbar-track {
+        border-radius: 3px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.1);
+      }
+      /* 定义滑块样式 */
+      div::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        height: 10px; /* 滚动条滑块长度 */
+
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      input {
+        width: 200px;
+        height: 50px;
+        border: 1px solid;
+      }
+      /* placeholder文字颜色、字号、位置调整： */
+      /* 每个浏览器的CSS选择器都有所差异，所以需要针对每个浏览器做单独的设定(可以在冒号前面写input和textarea)。 */
+
+      /* WebKit browsers 适配谷歌 */
+      input::-webkit-input-placeholder {
+        font-size: 16px;
+
+        color: #1bc57e;
+        text-indent: 10px;
+        text-align: center;
+        line-height: 50px;
+      }
+      /* Mozilla Firefox 4 to 18 适配火狐 */
+      input:-moz-placeholder {
+        color: #5592dd;
+        font-size: 10px;
+      }
+      /* Mozilla Firefox 19+ 适配火狐 */
+      input::-moz-placeholder {
+        color: #b047da;
+      }
+      /* Internet Explorer 10+  适配ie*/
+      input:-ms-input-placeholder {
+        color: #fc5579;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      svuhjvbhjdvbbncdskhjcbjbnjnjrfngijfdibkjrtijbiotkokboktrmobmtroipjhg9ieojagijreigjv
+      ifdjvbuoijvijirkvmkremipojiorjghjgihjgihjgi5hjgjnvjdknguviberhvfjdbnujnugujbnjnbujfbnutjvncddsjvbddrhdbgui4wherugihueirhburheujbn5ruhgruilhdgiutrjhibnjitrkhnbiknkrijdninifmeowikwmwgvfoegjmolkvdrm
+    </div>
+    <input type="text" placeholder="请输入手机号" />
+  </body>
+</html>

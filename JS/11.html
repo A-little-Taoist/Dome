@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //定时器 
+
+        //setInterval()循环调用
+        //参数1（回调函数）
+        //参数2(调用时间)单位毫秒
+        let num = 1;
+
+        //匿名函数方式
+        // setInterval(function () {
+        //     num++;
+        //     console.log(num);
+        // }, 1000);
+
+        //调用函数方式
+
+        // setInterval(fn, 1000);
+        // function fn() {
+        //     num++;
+        //     console.log(num);
+        // }
+
+        //setTimeout():延时调用
+
+        //清除定时器
+        //clearInterval(参数)；
+        // let timer = setInterval(function () {
+        //     console.log(num);
+        //     num++;
+        //     if (num == 6)
+        //         clearInterval(timer);
+        // }, 1000);
+
+        const timers = setTimeout(function () {
+            console.log(1); // 3秒之后，再执行这段代码。
+        }, 3000);
+        clearTimeout(timers);
+
+        //箭头函数
+        setTimeout(() => {
+            console.log(2);
+        }, 3000)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text"></input>
+    <script>
+        var dd = document.querySelector("input");
+        // dd.onfocus;
+        dd.onblur = function () {
+            // if (dd.value != 0) {
+            //     if (dd.value.length > 0) {
+            //         if (dd.value >= 0 || dd.value <= 0) {
+            //             // console.log(typeof (dd.value));
+            //             if (dd.value > 150 || dd.value < 0)
+            //                 alert("请输入0-150");
+            //             else if (dd.value < 150 && dd.value > 0) {
+            //                 if (dd.value > 120) {
+            //                     alert("优秀");
+            //                 }
+            //                 if (dd.value <= 120 && dd.value > 100) {
+            //                     alert("良好");
+            //                 }
+            //                 if (dd.value >= 90 && dd.value <= 100) {
+            //                     alert("及格");
+            //                 }
+            //                 if (dd.value < 90) {
+            //                     alert("不及格");
+            //                 }
+            //             }
+
+            //         }
+            //         else {
+            //             alert("请输入数字：");
+
+            //         }
+            //     }
+            //     else
+            //         alert("请输入内容：");
+            // }
+            // else
+            //     alert("请输入数字：");
+
+            //正则
+            var reg = /[0-9]/;
+            var reg2 = / /i;
+            var regs = /[^0-9]/;
+            console.log((dd.value).length);
+            if (!(regs.test(dd.value)) && dd.value.length != 0) {
+                if (reg.test(dd.value)) {
+                    if (dd.value > 150 || dd.value < 0)
+                        alert("请输入0-150");
+                    else if (dd.value < 150 && dd.value > 0) {
+                        if (dd.value > 120) {
+                            alert("优秀");
+                        }
+                        if (dd.value <= 120 && dd.value > 100) {
+                            alert("良好");
+                        }
+                        if (dd.value >= 90 && dd.value <= 100) {
+                            alert("及格");
+                        }
+                        if (dd.value < 90) {
+                            alert("不及格");
+                        }
+                    }
+                }
+                else
+                    alert("请输入数字：");
+            }
+            else
+                alert("请输入内容：");
+        }
+        //多分支
+        // switch (dd.value) {
+        //     case ""
+
+        // }
+    </script>
+</body>
+
+</html>

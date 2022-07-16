@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div {
+            width: 1px;
+            height: 200px;
+            background-color: black;
+            float: left;
+            margin-left: 400px;
+            transform-origin: center bottom; 
+            旋转的中心点是底部 
+            transform: rotate(6deg); 
+            动画 
+            animation: div 60s steps(60) infinite;
+        } */
+
+        /* @keyframes div {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        } */
+        div>ul {
+            list-style: none;
+            position: relative;
+            float: left;
+            margin-top: 400px;
+            margin-left: 400px;
+
+        }
+
+        li {
+
+            width: 1px;
+            background-color: black;
+            /* float: left; */
+            /* margin-left: 400px; */
+
+        }
+
+        ul>li:nth-child(1) {
+            height: 50px;
+            position: absolute;
+            left: -50%;
+            transform-origin: center top;
+        }
+
+
+        ul>li:nth-child(2) {
+            height: 100px;
+            position: absolute;
+            left: -50%;
+            transform-origin: center top;
+
+        }
+
+        ul>li:nth-child(3) {
+            height: 200px;
+            position: absolute;
+            left: -50%;
+            transform-origin: center top;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script>
+
+
+        var lis = document.querySelectorAll("li");
+        setInterval(() => {
+            let date = new Date();
+            let snum = date.getSeconds();//获取现在是多少秒。
+            let mnum = date.getMinutes() + snum / 60;//获取现在是多少分，不能忘记加上 秒数/60。
+            let hnum = date.getHours() + mnum / 60; //获取现在是多少时，不能忘记加上 分钟数/60。
+            lis[2].style.transform = `rotate(${snum * 6}deg)`;
+            lis[1].style.transform = `rotate(${mnum * 6}deg)`;
+            lis[0].style.transform = `rotate(${hnum * 30}deg)`;
+            //dd.style.transform = "rotate(" + snum * 6 + "deg)";
+        }, 1000);
+    </script>
+</body>
+
+</html>

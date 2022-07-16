@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rem</title>
+    <!-- 引入资源  根据 屏幕尺寸来选择css样式 -->
+    <!-- <link rel="stylesheet" href="01.css" media="screen and (min-width: 320px)" /> -->
+    <style>
+      /* em 是相对父元素来说的字体大小 */
+      /* rem 是相对html元素的字体大小 */
+      /* vw/vh 相对视口来划分大小 百分之一 */
+
+      /* html {
+        font: size 200px;
+      } */
+      div {
+        width: 10vw;
+        height: 15vh;
+        background-color: pink;
+      }
+
+      /* div p {
+        width: 2rem;
+        height: 5rem;
+        background-color: red;
+      } */
+
+      /* 媒体查询 @media  */
+      /* @media */
+      @media screen and (min-width: 768px) {
+        body {
+          background-color: pink;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p></p>
+    </div>
+  </body>
+</html>

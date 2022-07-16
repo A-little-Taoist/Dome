@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <style type="text/css">
+        * {
+            font-size: 10px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 35rem;
+            height: 38rem;
+            background: rgb(205, 205, 205);
+            border-radius: 1rem;
+            margin: 5% auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* .box使用 Flex 布局方式，并且使其中的 .clock水中、垂直方向都居中。*/
+        .clock {
+            width: 30rem;
+            height: 30rem;
+            background: #fff url(clock.jpg) no-repeat center;
+            background-size: 100%;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        /*添加中心轴：使用 CSS3 中的 伪元素 为时钟添加实心小圆点，指针都围着这个点转。*/
+        .clock:after {
+            content: "";
+            /* 这句 content: ''; 是必须的，不然这个伪元素不会显示，即使指定了宽度和高度。 */
+            width: 1.5rem;
+            height: 1.5rem;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* !!!向左上移动自身的50% */
+            z-index: 10;
+            /* 是为了使这个小圆点在视图的最上层，遮挡住指针交叉的地方 */
+        }
+
+        /*由于相对定位是从元素的左上角开始计算的，所以 top: 50%; left: 50%; 不能使这个小圆点在 Clock 的中心，使用 transform: translate(-50%,-50%); 向左上方移动自身宽度或高度的 50%*/
+
+        /*指针容器: 容器被放置在 Clock 的上方*/
+        .hours-container,
+        .minutes-container,
+        .seconds-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        /*添加指针：设置指针样式*/
+        .hours {
+            width: 3%;
+            height: 15%;
+            background: #000;
+            transform-origin: 50% 100%;
+            /* transform-origin: 50% 90%; 规定指针旋转的位置为：X 方向的中心线 和 Y 方向的 90% 处这条线的交叉点。*/
+            position: absolute;
+            top: 35%;
+            left: 48.5%;
+        }
+
+        .minutes {
+            width: 2%;
+            height: 26%;
+            background: #000;
+            transform-origin: 50% 100%;
+            position: absolute;
+            top: 24%;
+            left: 49%;
+
+        }
+
+        .seconds {
+            width: 1%;
+            height: 30%;
+            background: #f00;
+            transform-origin: 50% 100%;
+            position: absolute;
+            top: 20%;
+            left: 49.5%;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        .hours-container {
+            animation: rotate 43200s infinite linear;
+        }
+
+        .minutes-container {
+            animation: rotate 3600s infinite steps(60);
+        }
+
+        .seconds-container {
+            animation: rotate 60s infinite steps(60);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- .box是为了布局的方便 -->
+    <div class="box">
+        <article class="clock">
+            <!--  每个指针都需要一个 *-container容器 -->
+            <div class="hours-container">
+                <div class="hours"></div>
+            </div>
+            <div class="minutes-container">
+                <div class="minutes"></div>
+            </div>
+            <div class="seconds-container">
+                <div class="seconds"></div>
+            </div>
+        </article>
+    </div>
+
+    <script type="text/javascript">
+        function frame() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            var secondDegree = (seconds / 60) * 360 + 90;
+            var minuteDegree = (minutes / 60) * 360 + (seconds / 60) * 6 + 90;
+            var hourDegree = (hours / 12) * 360 + (minutes / 60) * 30 + 90;
+
+            var $secondHand = document.querySelector('.seconds-container');
+            var $minuteHand = document.querySelector('.minutes-container');
+            var $hourHand = document.querySelector('.hours-container');
+
+            function draw(dom, angle) {
+                dom.style.transform = "rotate(" + angle + "deg)";
+            }
+            draw($hourHand, hourDegree);
+            draw($minuteHand, minuteDegree);
+            draw($secondHand, secondDegree);
+        }
+        frame();
+        var timer = setInterval(frame, 1000);
+    </script>
+</body>
+
+</html>

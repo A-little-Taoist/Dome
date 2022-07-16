@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            float: right;
+
+        }
+
+        div:nth-child(2) {
+            margin-left: -20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+<script src="./jQuery/jquery-3.6.0.min.js"></script>
+<!-- //引入jquery更改颜色的插件 -->
+<script src="./jQuery/jquercolor.js"></script>
+<script>
+    $(function () {
+        $("div").css({ width: "500px", height: "200px", position: "absolute", top: "30%" });
+        $("div:eq(0)").css({ background: "red", right: "0%", zIndex: 99 });
+        $("div:eq(1)").css({ background: "blue", right: "-5%", zIndex: 991 });
+        $("div:eq(2)").css({ background: "pink", right: "-10%", zIndex: 992 });
+        $("div:eq(3)").css({ background: "black", right: "-15%", zIndex: 993 });
+        $("div:eq(4)").css({ background: "green", right: "-20%", zIndex: 996 });
+        // $("div:eq(0)").css({ right: "20%" });
+        // $("div:eq(0)").css({ right: "0%" });
+
+        // 随机颜色
+        // setInterval(() => {
+        //     var r = Math.floor(Math.random() * 256);
+        //     var g = Math.floor(Math.random() * 256);
+        //     var b = Math.floor(Math.random() * 256);
+        //     $("div:eq(0)").css({ background: "rgb(" + r + "," + g + "," + b + ")" });
+
+        // }, 1000);
+        var json = {
+            "right": "20%",
+            "backgroundColor": "blueviolet"
+        };
+        //背景色默认的jquery不支持更改 需要插件或者 css的animate配合
+        var json0 = {
+            "right": "0%"
+        };
+        var json1 = {
+            "right": "-5%"
+        };
+        // $("div:eq(0)").on("mouseenter", function () {
+        //     $("div:eq(0)").animate(json, 500);
+        // });
+        // $("div:eq(0)").on("mouseleave", function () {
+        //     $("div:eq(0)").animate(json0, 500);
+
+        // })
+        // $("div:eq(1)").on("mouseenter", function () {
+        //     $("div:eq(1)").animate(json, 1000);
+        // })
+
+        // $("div:eq(1)").on("mouseleave", function () {
+        //     $("div:eq(1)").animate(json1, 500);
+        // })
+
+        $("div:eq(0)").animate(json, 500);
+        // $("div:eq(0)").animate(json0, 1500);
+        // $("div:eq(1)").animate(json, 1000);
+        // $("div:eq(2)").animate(json, 1500);
+        // $("div:eq(3)").animate(json, 2000);
+        // $("div:eq(4)").animate(json, 2500);
+
+    });
+
+
+
+</script>
+
+</html>

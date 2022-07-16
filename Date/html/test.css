@@ -1,0 +1,13 @@
+div {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}
+div a {
+  height: 145px;
+  background-color: pink;
+}
+div a:hover {
+  color: #000;
+}
+/* 页面元素rem值= 页面元素像素大小px / html 里面文字大小 */

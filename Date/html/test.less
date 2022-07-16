@@ -1,0 +1,17 @@
+@color:pink;     // 定义一个颜色变量
+div{           
+    width: @ww;
+    height: @ww;
+    background-color: @color;    
+    a{
+        //运算符左右各一个空格 两个单位以第一个单位为准
+        height: @ww - 55;
+        background-color:@color;
+        //子元素 伪类
+        &:hover{
+            color: #000;
+        }
+    }                  // 调用这个颜色
+}
+@ww: 200px;
+//页面元素rem值= 页面元素像素大小px / html 里面文字大小

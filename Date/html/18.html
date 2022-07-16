@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS定位</title>
+    <style>
+        .box {
+            position: relative;
+            top: 100px;
+            left: 50px;
+            width: 200px;
+            height: 150px;
+            background-color: blueviolet;
+        }
+        
+        .bos {
+            width: 200px;
+            height: 150px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>相对定位：占有位置</h3>
+    <div class="box"></div>
+    <div class="bos"></div>
+    <h3>绝对定位</h3>
+    <p>:如果元素没有父元素，则以浏览器为父元素，有父元素，父元素没有定位，还是以浏览器为准</p>
+    <p>以最近有定位的元素为准</p>
+    <p>绝对定位不占有位置</p>
+    <h3>固定定位</h3>
+    <p>固定在浏览器可视窗口，不占位置</p>
+    <h3>粘性定位</h3>
+    <h3>叠放次序：z-index: 1; 数值越大次序越高</h3>
+    <h3>浮动不会压住文字图片</h3>
+    <h3>绝对定位和固定定位 会完全压住盒子的所有内容</h3>
+    <h3>元素的显示与隐藏： display: none;隐藏元素，不再占有元素 display:block;显示元素</h3>
+    <h3>visibility:visible/hidden;元素可见/元素的显示与隐藏.隐藏占有位置</h3>
+    <h3>对溢出元素的显示屯隐藏： overflow:visible/hidden;溢出部分显示/隐藏 overflow:scroll;溢出部分显示滚动条</h3>
+    <h3>overflow:auto;溢出显示滚动条，没溢出就不显示 滚动条</h3>
+</body>
+
+</html>
