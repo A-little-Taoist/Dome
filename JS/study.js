@@ -119,6 +119,35 @@
 // // console.log("----------------------------------------------------------------");
 
 // //  008. 序列中的最大乘积(Largest product in a series)
+//在下1000位数中，连续四个数的最大乘积为9∗9∗8∗9=5832:
+//寻找连续十三数的最大乘积，这个乘积是多少
+//存入txt文件中用js FileReader()读取出来
+
+// document.write('<input type="file" />');
+// const input = document.querySelector("input");
+// var s;
+// input.addEventListener(
+//   "change",
+//   () => {
+//     var reader = new FileReader();
+//     reader.readAsText(input.files[0], "utf8");
+//     reader.onload = () => {
+//       s = reader.result;
+//       var sum = s.split("");
+//       var productmax = 1;
+//       var product;
+//       for (var i = 0; i < sum.length; i++) {
+//         product = 1;
+//         for (var j = 0; j < 13; j++) {
+//           product *= sum[i + j];
+//         }
+//         if (product > productmax) productmax = product;
+//       }
+//       console.log(productmax);
+//     };
+//   },
+//   false
+// );
 
 // //  009. 特殊的毕达哥拉斯三元数(Special Pythagorean triplet)
 // // 毕达哥拉斯三元数是指一类三个自然数的集合，其中a<b<c且a^2+b^2=c^2，例如3^2+4^2=5^2。仅存在一组毕达哥拉斯三元数使得a+b+c=1000，求abc。
@@ -139,15 +168,36 @@
 // // console.log("----------------------------------------------------------------");
 //  010. 质数的和(Summation of primes)
 //注意：百万级质数和超过了number的最大值9007199254740992，这个值是 16 位。【可能】
-var sum = 0;
-for (var i = 2; i < 200000; i++) {
-  for (var j = 2; j < i; j++) {
-    if (i % j == 0) {
-      break;
+// var sum = 0;
+// for (var i = 2; i < 200000; i++) {
+//   for (var j = 2; j < i; j++) {
+//     if (i % j == 0) {
+//       break;
+//     }
+//   }
+//   if (i == j) {
+//     sum += i;
+//   }
+// }
+// console.log(sum);
+
+//012. 高度可除的三角数(highly divisible triangular number)
+// 三角数即由依次排列的自然数的和构成，所以第7个三角数是1+2+3+4+5+6+7=28，前十个三角数是：1,3,6,10,15,21,28,36,45,55,⋯
+//我们可以我知到 28 是第一个有五个以上除数（因子）的三角数。
+// 第一个有超过 500 个除数（因子）的三角数的值是多少？
+var n = 0;
+var num;
+for (var i = 1; ; i++) {
+  n += i;
+  num = 0;
+  for (var j = 1; j <= n; j++) {
+    if (n % j == 0) {
+      num++;
+      // console.log(num);
     }
   }
-  if (i == j) {
-    sum += i;
-  }
+  if (num > 5) break;
+  //垃圾算法 最多到四百左右 500时间太长
+  // if (num > 500) break;
 }
-console.log(sum);
+console.log(n);

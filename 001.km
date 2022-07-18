@@ -1,0 +1,152 @@
+{
+    "root": {
+        "data": {
+            "id": "clilenmi6vk0",
+            "created": 1658128244401,
+            "text": "MainTopic",
+            "priority": null,
+            "progress": null
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "clilh5889u00",
+                    "created": 1658128439448,
+                    "text": "topic",
+                    "priority": null,
+                    "progress": null,
+                    "layout_mind_offset": {
+                        "x": -44.99999932944786,
+                        "y": -178.7499973364174
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "clilh60lqu80",
+                            "created": 1658128441164,
+                            "text": "topic",
+                            "expandState": "collapse",
+                            "priority": null,
+                            "progress": null,
+                            "layout_right_offset": {
+                                "x": 88.74999867752189,
+                                "y": -282.0000017136335
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "clilh7l84v40",
+                                    "created": 1658128444588,
+                                    "text": "topic",
+                                    "expandState": "collapse"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "clilh6lpdp40",
+                                            "created": 1658128442440,
+                                            "text": "topic"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "clilh8dnk6g0",
+                                    "created": 1658128446308,
+                                    "text": "topic"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "clilh93prr40",
+                                    "created": 1658128447883,
+                                    "text": "topic"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "clilhsdixxk0",
+                    "created": 1658128489835,
+                    "text": "topic",
+                    "priority": null,
+                    "progress": null,
+                    "layout_mind_offset": {
+                        "x": -29.999999552965164,
+                        "y": 201.24999700114137
+                    }
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "clilhwxyte80",
+                    "created": 1658128499778,
+                    "text": "topic",
+                    "priority": null,
+                    "progress": null,
+                    "layout_mind_offset": {
+                        "x": -14.999999776482639,
+                        "y": -341.2499949149787
+                    }
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "clilhzpezvs0",
+                    "created": 1658128505791,
+                    "text": "topic",
+                    "priority": null,
+                    "progress": null,
+                    "layout_mind_offset": {
+                        "x": -171.2499974481762,
+                        "y": -182.4999972805382
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "clilhz0tnj40",
+                            "created": 1658128504304,
+                            "text": "topic",
+                            "priority": null,
+                            "progress": null,
+                            "layout_left_offset": {
+                                "x": -29.999999552965164,
+                                "y": -211.2499968521298
+                            }
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "clili08lws00",
+                            "created": 1658128506952,
+                            "text": "topic",
+                            "priority": null,
+                            "progress": null,
+                            "layout_left_offset": {
+                                "x": -27.499999590218067,
+                                "y": 228.74999659135938
+                            }
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

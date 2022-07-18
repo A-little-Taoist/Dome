@@ -9,16 +9,31 @@
 </head>
 
 <body>
-    <input type="file" />
     <script>
+        document.write('<input type="file" />')
         const input = document.querySelector('input');
+        var s;
         input.addEventListener('change', () => {
             var reader = new FileReader();
             reader.readAsText(input.files[0], 'utf8');
             reader.onload = () => {
-                document.body.innerHTML += reader.result;
+                s = reader.result;
+                var sum = s.split('');
+                var productmax = 1;
+                var product;
+                for (var i = 0; i < sum.length; i++) {
+                    product = 1;
+                    for (var j = 0; j < 13; j++) {
+                        product *= sum[i + j];
+                    }
+                    if (product > productmax)
+                        productmax = product;
+                }
+                console.log(productmax);
+
             }
         }, false);
+
     </script>
 </body>
 
