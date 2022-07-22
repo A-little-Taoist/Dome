@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>表格标签</title>
+    <link rel="stylesheet" href="">
 </head>
 
 <body>
-    <table align="center" border="1" cellspacing="0" cellpadding="0" width="500" height="300">
+    <table align="center" border="1" cellspacing="0" cellpadding="0" width="500" height="300" media>
         <thead>
+            <caption align="center">标题</caption>
             <tr>
                 <td>姓名</td>
                 <td>性别</td>
@@ -51,10 +53,12 @@
     <!-- 合并单元格 -->
     <table align="center" border="1" cellspacing="0" cellpadding="0" width="500" height="300">
         <thead>
+
             <tr>
                 <td colspan="2">姓名</td>
 
                 <td>年龄</td>
+                <th>123</th>
             </tr>
         </thead>
         <tbody>
@@ -69,6 +73,13 @@
                 <td>1000</td>
             </tr>
         </tbody>
+        <tfoot>
+            <tr>
+                <td>龙物</td>
+
+                <td>1000</td>
+            </tr>
+        </tfoot>
     </table>
 </body>
 

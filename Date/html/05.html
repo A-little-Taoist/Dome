@@ -6,46 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>表单标签</title>
-    <style>
-     .txt {
-        position: relative;
-     }
-     .txts {
-        position:absolute;
-        margin-top: 2px;
-        margin-left: -16.5px;
-     }
-    </style>
 </head>
 
 <body>
-    <from action="demo.php" method="get" name="demo"></from>
-    用户名：<input type="text" name="uername" class="txt" /> 
-    <!-- 单选按钮 -->
-    <input type="button"  class="txts" /><br> 性别:
-    <label for="nan">男</label>
-    <input type="radio" name="sex" id="nan">
-    <br>
-    <label for="nu">女</label>
-    <input type="radio" name="sex" id="nu">
-    <br> 爱好：吃饭
-    <input type="checkbox" />睡觉<input type="checkbox" /><br>
-    <input type="submit" /><br>
-    <input type="reset" /><br>
-    <input type="file" /><br>
-    <h4>下拉表单</h4>
-    地址：
-    <select>
-        <option>
-            重庆
-        </option>
-        <option>北京</option>
-    </select>
-    <h4>文本域标签</h4>
-    <from>
-        网站留言：
-        <textarea>奥特曼打小怪兽</textarea>
-    </from>
+    <!--method="get"默认明文,method="post"密文-->
+    <from action="https://www.jd.com/" method="get" name="demo"> 用户名：<input type="text" name="uername" />
+        密码：<input type="password" name="password" />
+        <!-- 单选按钮 -->
+        <br>性别:
+        <label for="nan">男</label>
+        <input type="radio" name="sex" id="nan">
+        <br>
+        <label for="nu">女</label>
+        <input type="radio" name="sex" id="nu">
+        <br> 爱好：吃饭
+        <input type="checkbox" />睡觉<input type="checkbox" /><br>
+        <input type="button" value="注册" /><br>
+        <input type="submit" /><br>
+        <input type="reset" /><br>
+        <input type="file" /><br>
+        <h4>下拉表单</h4>
+        地址：
+        <select>
+            <option>
+                重庆
+            </option>
+            <option>北京</option>
+        </select>
+        <h4>文本域标签</h4>
+        <from>
+            网站留言：
+            <textarea>奥特曼打小怪兽</textarea>
+        </from>
 
 </html>
 
