@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .blank {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .top {
+            height: 60px;
+        }
+
+        .top div:nth-child(1) {
+            float: left;
+            width: 100px;
+        }
+
+        .top div img {
+            height: 60px;
+        }
+
+
+        .top div:nth-child(2) {
+            float: right;
+            line-height: 60px;
+
+        }
+
+        input {
+            height: 20px;
+            text-indent: 1em;
+            background-color: rgb(231, 228, 228);
+            outline: none;
+            border-radius: 3px;
+            border: none;
+        }
+
+        .top div img:nth-child(2) {
+            margin-left: -20px;
+            margin-bottom: -5px;
+            height: 20px;
+        }
+
+        .nav {
+            float: left;
+            width: 100%;
+            height: 37px;
+            background-color: black;
+            margin: 0 auto;
+        }
+
+        .nav ul {
+            transform: translate(1.5%, -50%)
+        }
+
+        .nav ul li {
+            width: 12%;
+            height: 37px;
+            line-height: 37px;
+            float: left;
+            list-style: none;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-right: 1px solid white;
+
+        }
+
+        .nav ul li:last-child {
+            border-right: 0px;
+        }
+
+        .blear {
+            margin-top: 37px;
+            height: 400px;
+            background: url(https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/202207221838240.png);
+            background-size: cover;
+        }
+
+        .content {
+            width: 100%;
+            height: 200px;
+            background-color: white;
+        }
+
+        .content div:nth-child(1) {
+            margin-top: 10px;
+            width: 45%;
+            height: 200px;
+            list-style-position: inside;
+        }
+
+        .content div:nth-child(1) ul li::marker {
+            color: rgb(216, 219, 221);
+        }
+
+        .navbar-right {
+            float: right;
+            list-style: none;
+            color: rgb(142, 146, 146);
+            margin-top: -124px;
+
+        }
+
+
+        .content div:nth-child(2) {
+            float: right;
+            width: 25%;
+            height: 200px;
+            background-color: rgb(214, 218, 218);
+            margin-top: -196px;
+            margin-right: 25%;
+            text-indent: 1em;
+
+        }
+
+        span {
+            text-indent: 1em;
+        }
+
+        .content div:nth-child(3) {
+            float: right;
+            width: 25%;
+            height: 180px;
+            margin-top: -174px;
+            margin-right: -55%;
+
+        }
+
+        .btn2 {
+            background-color: rgb(67, 161, 238);
+            transform: translate(-250%, 90%);
+            color: white;
+        }
+
+        .blearone {
+            height: 150px;
+        }
+
+        .blearone dl {
+            float: left;
+            width: 24%;
+            margin-right: 5px;
+
+        }
+
+        .clear {
+            height: 1px;
+            clear: both;
+        }
+
+        .floor {
+            height: 200px;
+            background-color: rgb(194, 191, 191);
+        }
+
+        .floor .floor1 div {
+            height: 150px;
+            float: left;
+            margin-left: 2.5%;
+            margin-right: 12%;
+        }
+
+        .floor1 {
+            width: 46%;
+            height: 150px;
+            margin-left: 5px;
+        }
+
+        .floor p:nth-child(1) {
+            margin-top: 10%;
+        }
+
+        .floor2 {
+            width: 20%;
+            height: 150px;
+            float: left;
+            margin-top: -17%;
+            margin-left: 25px;
+            /* background: url(https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/202207221838252.png); */
+        }
+
+        .floor3 {
+            width: 26%;
+            float: left;
+            margin-top: -17.6%;
+            margin-left: 26%;
+        }
+
+        hr {
+            border: 0.0001px solid rgb(131, 128, 128);
+        }
+
+        .bottom {
+            height: 20px;
+        }
+
+        .bottom pre {
+            /* width: 70%; */
+            font-size: 12px;
+            color: rgb(204, 204, 204);
+        }
+
+        .bottom img {
+            float: right;
+            margin-right: 10px;
+            transform: translate(-100%, -100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blank">
+        <div class="top">
+            <div><img src="https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/202207221838238.png" alt=""></div>
+            <div><input type="text" placeholder="SEARCH"><img
+                    src="https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/202207221858657.png" alt=""></div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li>集团介绍</li>
+                <li>产品中心</li>
+                <li>市场中心</li>
+                <li>技术研发</li>
+                <li>国际合作</li>
+                <li>投资者关系</li>
+                <li>新闻资讯</li>
+                <li>人力资源</li>
+            </ul>
+        </div>
+        <div class="blear"></div>
+        <div class="content">
+            <div>
+                <h3>公司新闻</h3>
+                <br>
+                <ul>
+                    <li>如刀砍肆碌要在忍耐力</li>
+                    <li>如刀砍肆碌要在忍耐力</li>
+                    <li>如刀砍肆碌要在忍耐力</li>
+                    <li>如刀砍肆碌要在忍耐力</li>
+                    <li>如刀砍肆碌要在忍耐力</li>
+                    <li>如刀砍肆碌要在忍耐力</li>
+                </ul>
+                <ul class="navbar-right">
+                    <li>2017-03-07</li>
+                    <li>2017-03-07</li>
+                    <li>2017-03-07</li>
+                    <li>2017-03-07</li>
+                    <li>2017-03-07</li>
+                    <li>2017-03-07</li>
+                </ul>
+            </div>
+            <div>
+                <h2>公司介绍</h2>
+                <h3>公司介绍</h3>
+                <span>砍肆碌要砍肆碌要砍肆碌要砍肆碌要砍肆碌要砍肆碌要砍肆碌要</span>
+            </div>
+            <div>
+                <span>人才招聘</span>
+                <img src="https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/202207221838241.png" alt="">
+                <input type="button" value="come" class="btn2">
+            </div>
+        </div>
+        <br>
+        <h3>市场项目</h3>
+        <div class="clear"></div>
+        <div class="blearone">
+            <dl>
+                <dt><img src="https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/202207221838244.png" alt="">
+                <dd>交通轨道有点挤，交通轨道有点挤，交通轨道有点挤</dd>
+                </dt>
+            </dl>
+            <dl>
+                <dt><img src="https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/202207221838244.png" alt="">
+                <dd>交通轨道有点挤，交通轨道有点挤，交通轨道有点挤</dd>
+                </dt>
+            </dl>
+            <dl>
+                <dt><img src="https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/202207221838244.png" alt="">
+                <dd>交通轨道有点挤，交通轨道有点挤，交通轨道有点挤</dd>
+                </dt>
+            </dl>
+            <dl class="dllast">
+                <dt><img src="https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/202207221838244.png" alt="">
+                <dd>交通轨道有点挤，交通轨道有点挤，交通轨道有点挤</dd>
+                </dt>
+            </dl>
+        </div>
+
+        <div class="clear"></div>
+        <div class="floor">
+            <div class="floor1">
+                <p>产品中心</p>
+                <hr>
+                <div>
+                    <br>
+                    <p>>&nbsp&nbsp科技力量</p>
+                    <p>>&nbsp&nbsp科技力量</p>
+                    <p>>&nbsp&nbsp科技力量</p>
+                    <p>>&nbsp&nbsp科技力量</p>
+                    <p>>&nbsp&nbsp科技力量</p>
+                    <p>>&nbsp&nbsp科技力量</p>
+                </div>
+                <div>
+                    <br>
+                    <p>>&nbsp&nbsp科技力量</p>
+                    <p>>&nbsp&nbsp科技力量</p>
+                    <p>>&nbsp&nbsp科技力量</p>
+                    <p>>&nbsp&nbsp科技力量</p>
+                    <p>>&nbsp&nbsp科技力量</p>
+                    <p>>&nbsp&nbsp科技力量</p>
+                </div>
+                <div>
+                    <br>
+                    <p>>&nbsp&nbsp科技力量</p>
+                    <p>>&nbsp&nbsp科技力量</p>
+                    <p>>&nbsp&nbsp科技力量</p>
+                    <p>>&nbsp&nbsp科技力量</p>
+                    <p>>&nbsp&nbsp科技力量</p>
+                    <p>>&nbsp&nbsp科技力量</p>
+                </div>
+            </div>
+            <div class="floor2">
+                <p>技术研发</p>
+                <hr>
+                <br>
+                <p>>&nbsp&nbsp科技力量</p>
+                <p>>&nbsp&nbsp科技力量</p>
+                <p>>&nbsp&nbsp科技力量</p>
+                <p>>&nbsp&nbsp科技力量</p>
+                <p>>&nbsp&nbsp科技力量</p>
+                <p>>&nbsp&nbsp科技力量</p>
+            </div>
+            <div class="floor3">
+                <p>营销网络</p>
+                <hr>
+                <br>
+                <img src="https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/202207221838252.png">
+            </div>
+        </div>
+        <div class="bottom">
+            <pre>
+
+ 网络地图|联系我们|关注关注|采购系统入口                COPYRDGHT © 2013控股控股集团 版权所有 浙ICP备06005901号 技术支持 : 博采互动  分享到:
+</pre>
+            <img src="https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/202207221838248.png" alt="">
+            <img src="https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/202207221838250.png" alt="">
+            <img src="https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/202207221838251.png" alt="">
+            <img src="https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/202207221838246.png" alt="">
+            <img src="https://aritus-bed.oss-cn-hangzhou.aliyuncs.com/img/202207221838247.png" alt="">
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

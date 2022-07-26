@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top {
+            display: flex;
+            flex-wrap: wrap;
+            width: 400px;
+            height: 400px;
+            animation: ts 0.5s steps(360) infinite;
+            /* 旋转的中心点 X Y*/
+            transform-origin: center center;
+            /* transition: all 0.5s  linear ; */
+            position: relative;
+
+        }
+
+        .origin {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 20px 20px;
+            position: absolute;
+            top: 48%;
+            left: 48%;
+        }
+
+        div div:nth-child(2) {
+            width: 0px;
+            height: 0px;
+            /* background-color: red; */
+            border-top: 100px solid transparent;
+            border-left: 100px solid transparent;
+            border-bottom: 100px solid transparent;
+            border-right: 100px solid red;
+            /* border-radius: 100px 100px 0px 0px; */
+            /*左上 右上 右下 左下*/
+            /* margin-top: 100px; */
+            /* transform-origin: right center; */
+
+        }
+
+        div div:nth-child(3) {
+            width: 0px;
+            height: 0px;
+            /* background-color: blue; */
+            border-top: 100px solid transparent;
+            border-left: 100px solid transparent;
+            border-bottom: 100px solid blue;
+            border-right: 100px solid transparent;
+            /* border-radius: 0 100px 100px 0; */
+            /*左上 右上 右下 左下*/
+            /* transform-origin: center bottom; */
+
+
+        }
+
+        div div:nth-child(4) {
+            width: 0px;
+            height: 0px;
+            /* background-color: pink; */
+            border-top: 100px solid pink;
+            border-left: 100px solid transparent;
+            border-bottom: 100px solid transparent;
+            border-right: 100px solid transparent;
+            /* border-radius: 100px 0px 0px 100px; */
+            /*左上 右上 右下 左下*/
+            /* margin-left: -200px;
+            margin-top: 200px; */
+            /* transform-origin: center top; */
+        }
+
+        div div:nth-child(5) {
+            width: 0px;
+            height: 0px;
+            /* background-color: blueviolet; */
+            border-top: 100px solid transparent;
+            border-left: 100px solid blueviolet;
+            border-bottom: 100px solid transparent;
+            border-right: 100px solid transparent;
+            /* border-radius: 0px 0px 100px 100px; */
+            /*左上 右上 右下 左下*/
+            /* margin-top: 200px;
+            margin-right: -100px; */
+            /* transform-origin: left center; */
+
+        }
+
+        @keyframes ts {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        div:hover {
+            /*暂停动画*/
+            animation-play-state: paused;
+            /* transform: rotate(360deg); */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="origin"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+
+    </div>
+</body>
+
+</html>
