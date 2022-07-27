@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>用户界面样式</title>
-    <style>
-      input {
-        /* 取消表彰轮廓 */
-        outline: none;
-      }
 
-      textarea {
-        /* 防止拖拽文本域 */
-        resize: none;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>用户界面样式</title>
+  <style>
+    input {
+      /* 取消表彰轮廓 */
+      outline: none;
+    }
 
-      img {
-        /* 默认与基线对齐 baseline */
-        /* 使图片与文字底线对齐 */
-        /* vertical-align: bottom; */
-        /* 使图片与文字中线对齐 */
-        vertical-align: middle;
-        /* 使图片与文字顶线对齐 */
-        /* vertical-align: top; */
-      }
+    textarea {
+      /* 防止拖拽文本域 */
+      resize: none;
+    }
 
-      div {
-        width: 100px;
-        height: 50px;
-        background-color: blueviolet;
-        margin: 80px auto;
-        /* 自动换行 */
-        /* white-space: normal; */
-        /* 1、强制显示在一行 */
-        white-space: nowrap;
-        /* 2、溢出部分隐藏 */
-        overflow: hidden;
-        /* 3、文字溢出时用省略号来显示
+    img {
+      /* 默认与基线对齐 baseline */
+      /* 使图片与文字底线对齐 */
+      /* vertical-align: bottom; */
+      /* 使图片与文字中线对齐 */
+      vertical-align: middle;
+      /* 使图片与文字顶线对齐 */
+      /* vertical-align: top; */
+    }
+
+    div {
+      width: 100px;
+      height: 50px;
+      background-color: blueviolet;
+      margin: 80px auto;
+      /* 自动换行 */
+      /* white-space: normal; */
+      /* 1、强制显示在一行 */
+      white-space: nowrap;
+      /* 2、溢出部分隐藏 */
+      overflow: hidden;
+      /* 3、文字溢出时用省略号来显示
             text-overflow: ellipsis; */
-      }
-    </style>
-  </head>
+    }
+  </style>
+</head>
 
-  <body>
-    <ul>
-      <li style="cursor: default">鼠标样式1</li>
-      <li style="cursor: pointer">鼠标样式2</li>
-      <li style="cursor: move">鼠标样式3</li>
-      <li style="cursor: text">鼠标样式4</li>
-      <li style="cursor: not-allowed">鼠标样式5</li>
-    </ul>
-    <!-- 取消表单轮廓 -->
-    <input type="text" />
-    <!-- 防止拖拽文本域 -->
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <img src="../image/wallhaven-q2mk3l.png" alt="" /> 你好啊！
-    <h3>
-      图片默认与文字基线对齐所有图片底下有空白缝隙，解决方法改变对齐线，改为中线之类
-      ，另一种方法转换为块级元素
-    </h3>
-    <div>溢出的文字用省略号替换，奥特曼打小怪兽！</div>
-  </body>
+<body>
+  <ul>
+    <li style="cursor: default">鼠标样式1</li>
+    <li style="cursor: pointer">鼠标样式2</li>
+    <li style="cursor: move">鼠标样式3</li>
+    <li style="cursor: text">鼠标样式4</li>
+    <li style="cursor: not-allowed">鼠标样式5</li>
+  </ul>
+  <!-- 取消表单轮廓 -->
+  <input type="text" />
+  <!-- 防止拖拽文本域 -->
+  <textarea name="" id="" cols="30" rows="10"></textarea>
+  <img src="../image/wallhaven-q2mk3l.png" alt="" /> 你好啊！
+  <h3>
+    图片默认与文字基线对齐所有图片底下有空白缝隙，解决方法改变对齐线，改为中线之类
+    ，另一种方法转换为块级元素
+  </h3>
+  <div>溢出的文字用省略号替换，奥特曼打小怪兽！</div>
+</body>
+
 </html>
